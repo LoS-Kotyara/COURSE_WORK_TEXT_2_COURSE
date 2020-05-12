@@ -1,0 +1,99 @@
+\subsection{Расстояние Левенштейна}
+Рассмотрим следующую задачу: имеется две строки s1 и s2, необходимо перевести либо s1 в s2, либо s2 в s1, используя операции:
+
+\begin{itemize}
+	\item i: Вставка символа в произвольное место;
+	\item d: Удаление символа с произвольной позиции;
+	\item r: замена символа на другой.
+\end{itemize}
+Расстоянием Левенштейна для перевода s1 в s2 для рассматриваемой задачи будет d(s1, s2) - минимальное количество операций i/d/r для перевода s1 в s2, а редакционное предписание - перечисление операций для перевода с их параметрами.
+
+Для расстояния Левенштейна справедливы следующие утверждения:
+\begin{enumerate}
+	\item $d(s1, s2) \geq \|s1\| - \|s2\|$
+	\item $d(s1, s2) \leq \max(|s1|, |s2|)$
+	\item $d(s1, s2) = 0 \iff s1 = s2$
+\end{enumerate},
+где |s| - это длина строки s.
+
+Искомое расстояние формируется через вспомогательную функцию D(m, n), находящую редакционное расстояние для срезов s1[0, m] и s2[0, n], где D(i,~j) находится по формуле~\ref{eq:1}
+
+
+\[
+D(i, j) = \begin{cases}
+0 & ; i = 0, j = 0 \\
+i & ; j = 0, i > 0 \\
+j & ; i = 0, j > 0 \\
+D(i - 1, j - 1) & ; s1[i] = s2[j] \\
+\min\begin{pmatrix}
+D(i, j - 1) \\
+D(i - 1, j)\\
+D(i - 1, j - 1)
+\end{pmatrix} + 1 & : j > 0, i > 0, s1[i] \neq s2[j]
+\end{cases} \label{eq:1} \tag{1}
+\]
+
+, где (i, j) - клетка матрицы, в которой мы находимся на данном шаге.~\cite{redRasst}
+
+Здесь $ D(i, 0) =  $ и $ D(0, j) = j $ получены из соображения, что любая строка может получиться из пустой, добавлением нужного количества нужных символов, любые другие операции будут только увеличивать оценку.
+
+В общем случае имеем D(i,~j) по формуле~\ref{eq:2}~\cite{redRasst}
+\[
+D(i, j) = D(i - 1, j - 1), если s1[i] = s2[j],
+\label{eq:2} \tag{2}
+\]
+иначе по формуле~\ref{eq:3}
+\[
+D(i, j) =\min\begin{pmatrix}
+D(i, j - 1) \\
+D(i - 1, j)\\
+D(i - 1, j - 1)
+\end{pmatrix} + 1
+\label{eq:3} \tag{3}
+\].
+
+В данном случае мы выбираем наиболее выгодную операцию: удаление символа (D(i - 1, j)), добавление (D(i, j - 1)) или замена (D(i - 1, j - 1)).
+
+Вычисление матрицы D можно произвести, используя следующий псевдокод:
+
+\begin{lstlisting}
+input: strings a[1..length(a)], b[1..length(b)]
+output: distance, integer
+
+let d[0..length(a), 0..length(b)] be a 2-d array of integers, dimensions length(a)+1, length(b)+1
+// note that d is zero-indexed, while a and b are one-indexed.
+
+for i := 0 to length(a) inclusive do
+	d[i, 0] := i
+for j := 0 to length(b) inclusive do
+	d[0, j] := j
+
+for i := 1 to length(a) inclusive do
+	for j := 1 to length(b) inclusive do
+		if a[i] = b[j] then
+			cost := 0
+		else
+			cost := 1
+		d[i, j] := minimum(d[i-1, j] + 1,     // deletion
+						   d[i, j-1] + 1,     // insertion
+						   d[i-1, j-1] + cost)  // substitution
+return d[length(a), length(b)]
+\end{lstlisting}
+
+Результат работы алгоритма для слов ``Пять'' и ``Семь'' представлен в таблице~\ref{tab:1}.
+
+%% \newpage
+
+\begin{table}[H]
+	\caption{Пример работы алгоритма}
+	\label{tab:1}
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		&   & П & Я & Т & Ь \\ \hline
+		& 0 & 1 & 2 & 3 & 4 \\ \hline
+		С & 1 & 1 & 2 & 3 & 4 \\ \hline
+		Е & 2 & 2 & 2 & 3 & 4 \\ \hline
+		М & 3 & 3 & 3 & 3 & 4 \\ \hline
+		Ь & 4 & 4 & 4 & 4 & 3 \\ \hline
+	\end{tabular}
+\end{table}

@@ -1,0 +1,97 @@
+\subsection{Расстояние Дамерау-Левенштейна}
+Расстояние Дамерау-Левенштейна является модификацией расстояния Левенштейна - к операциям замены, удаления и вставки добавляется операция перестановки символов.
+
+Большинство опечаток могут быть получены из правильного написания по нескольким простым правилам. Дамерау указывает, что 80 процентов всех орфографических ошибок являются результатом~\cite{damerau}:
+
+\begin{itemize}
+	\item Перестановки двух букв;
+	\item Добавления буквы;
+	\item Удаления буквы;
+	\item Написания неправильной буквы.
+\end{itemize}
+
+Для нахождения расстояния Дамерау-Левенштейна используется два алгоритма: упрощенный алгоритм, в котором предполагается, что любой срез может быть редактирован не более одного раза, и корректный алгоритм, в котором этого ограничения нет.
+
+В обоих алгоритмах редакционное предписание имеет вид:
+
+\[
+D(i, j) = \min\begin{cases}
+0 & ; i = 0, j = 0 \\
+D(i-1, j) + 1 & ; i > 0 \\
+D(i, j - 1) + 1 & ; j > 0 \\ 
+D(i - 1; j - 1) + 1_{s1[i] \neq s2[j]} & ; i > 0, j > 0\\
+
+D(i - 2, j - 2) + 1 & ; i > 1, j > 1, a[i] = b[j - 1],\\ & a[i - 1] = b[j]
+\end{cases}
+\]
+
+Различие между алгоритмом нахождения расстояния Левенштейна и упрощенным алгоритмом нахождения расстояния Дамерау-Левенштейна состоит в добавлении условия перестановки в последнем. Псевдокод алгоритма:
+
+\begin{lstlisting}
+input: strings a[1..length(a)], b[1..length(b)]
+output: distance, integer
+
+let d[0..length(a), 0..length(b)] be a 2-d array of integers, dimensions length(a)+1, length(b)+1
+// note that d is zero-indexed, while a and b are one-indexed.
+
+for i := 0 to length(a) inclusive do
+	d[i, 0] := i
+for j := 0 to length(b) inclusive do
+	d[0, j] := j
+
+for i := 1 to length(a) inclusive do
+	for j := 1 to length(b) inclusive do
+		if a[i] = b[j] then
+			cost := 0
+		else
+			cost := 1
+		d[i, j] := minimum(d[i-1, j] + 1,     // deletion
+						   d[i, j-1] + 1,     // insertion
+						   d[i-1, j-1] + cost)  // substitution
+		if i > 1 and j > 1 and a[i] = b[j-1] and a[i-1] = b[j] then
+			d[i, j] := minimum(d[i, j],
+							   d[i-2, j-2] + 1)  // transposition
+return d[length(a), length(b)]
+\end{lstlisting}
+
+Корректный алгоритм находит расстояние без ограничения возможных перестановок в подстроках, из-за этого ему необходим дополнительный параметр - размер алфавита $\Sigma$, такой, что все буквы данных строк будут находиться в массиве $[0, |\Sigma|$]~\cite{damerau2}. Псевдокод алгоритма:
+
+\begin{lstlisting}
+input: strings a[1..length(a)], b[1..length(b)]
+output: distance, integer
+
+da := new array of |Sigma| integers
+for i := 1 to |Sigma| inclusive do
+	da[i] := 0
+
+let d[-1..length(a), -1..length(b)] be a 2-d array of integers, dimensions length(a)+2, length(b)+2
+// note that d has indices starting at -1, while a, b and da are one-indexed.
+
+maxdist := length(a) + length(b)
+d[-1, -1] := maxdist
+for i := 0 to length(a) inclusive do
+	d[i, -1] := maxdist
+	d[i, 0] := i
+for j := 0 to length(b) inclusive do
+	d[-1, j] := maxdist
+	d[0, j] := j
+
+for i := 1 to length(a) inclusive do
+	db := 0
+	for j := 1 to length(b) inclusive do
+		k := da[b[j]]
+		l := db
+		if a[i] = b[j] then
+			cost := 0
+			db := j
+		else
+			cost := 1
+		d[i, j] := minimum(d[i-1, j-1] + cost,  //substitution
+						   d[i,   j-1] + 1,     //insertion
+						   d[i-1, j  ] + 1,     //deletion
+						   d[k-1, l-1] + (i-k-1) + 1 + (j-l-1)) //transposition
+da[a[i]] := i
+return d[length(a), length(b)]
+\end{lstlisting}
+
+Здесь da представляет собой массив, хранящий в себе индексы последних совпадений s1[*] с s2[j] (i` < i, j: s1[i`] = s2[j]), db - индексы последних совпадений s2[*] с s1[i] (i, j' < j: s2[j'] = s1[i]) .
