@@ -1,0 +1,33 @@
+[
+  {
+    "word": "не",
+    "translit": "ne",
+    "metaphone": "N",
+    "cyrMetaphone": "НИ"
+  },
+  {
+    "word": "что",
+    "translit": "chto",
+    "metaphone": "KT",
+    "cyrMetaphone": "ЧТА"
+  },
+  {
+    "word": "на",
+    "translit": "na",
+    "metaphone": "N",
+    "cyrMetaphone": "НА"
+  },
+  {
+    "word": "он",
+    "translit": "on",
+    "metaphone": "AN",
+    "cyrMetaphone": "АН"
+  },
+  {
+    "word": "как",
+    "translit": "kak",
+    "metaphone": "KK",
+    "cyrMetaphone": "КАК"
+  },
+  ...
+]
