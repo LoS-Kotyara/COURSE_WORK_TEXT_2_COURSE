@@ -115,10 +115,12 @@ LaTeX Font Warning: Font shape `OT1/ftm/m/n' undefined
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)))
-(./TexModules/abbreviationsAndDefinitions.tex [2] [3]
-Overfull \hbox (2.6008pt too wide) in paragraph at lines 13--14
-[]\T2A/ftm/bx/n/14.4 ^^V по-сле-до-ва-тель-ность дей-ствий, необ-хо-ди-мая для
-) (./TexModules/intro.tex [4]) (./TexModules/Theoretical/index.tex
+(./TexModules/abbreviationsAndDefinitions.tex [2] [3]) (./TexModules/intro.tex
+[4]
+
+LaTeX Warning: Citation `medium' on page 5 undefined on input line 8.
+
+) (./TexModules/Theoretical/index.tex
 (./TexModules/Theoretical/Algorithms/index.tex [5]
 (./TexModules/Theoretical/Algorithms/LevensteinDistance.tex
 Overfull \hbox (5.91864pt too wide) in paragraph at lines 19--20
@@ -150,40 +152,42 @@ Overfull \hbox (7.7973pt too wide) in paragraph at lines 35--36
 )) (./TexModules/Theoretical/Interface/index.tex [12] [13] [14]))
 (./TexModules/Studies/index.tex (./TexModules/Studies/Algorithms/index.tex
 [15] (./TexModules/Studies/Algorithms/dictionary.tex [16]
-Overfull \hbox (0.8135pt too wide) in paragraph at lines 37--38
+Overfull \hbox (0.8135pt too wide) in paragraph at lines 35--36
 []\T2A/ftm/bx/n/14.4 Если в объ-ек-те от-сут-ству-ет ключ, со-от-вет-ству-ю-щий
  оче-ред-ной бук-
 [17] (./TexModules/Appendix/progs/first5words.txt))
-(./TexModules/Studies/Algorithms/testForSimilarity.tex [18]
-Overfull \hbox (42.07695pt too wide) in paragraph at lines 20--21
+(./TexModules/Studies/Algorithms/testForSimilarity.tex
+Overfull \hbox (11.2697pt too wide) in paragraph at lines 3--4
+\T2A/ftm/bx/n/14.4 ная функ-ция, ко-то-рая воз-вра-ща-ет не толь-ко рас-сто-я-н
+ие Дамерау-Левенштейна,
+[18]
+Overfull \hbox (42.07695pt too wide) in paragraph at lines 18--19
 []\T2A/ftm/bx/n/14.4 Также в те-ле функ-ции на-хо-дят-ся транс-ли-те-ра-ция сло
 -ва, его double_metaphone
 
-Overfull \hbox (2.53558pt too wide) in paragraph at lines 24--25
+Overfull \hbox (2.53558pt too wide) in paragraph at lines 22--23
 \T2A/ftm/bx/n/14.4 бо-лее чем на 1, об-ра-ба-ты-ва-ет-ся с ис-ход-ным сло-вом а
 л-го-рит-мом Дамерау-
-)) (./TexModules/Studies/Interface/index.tex [19] [20]
-(./TexModules/Studies/Interface/component.tex [21 <./TexModules/pics/vue_temp.j
+)) (./TexModules/Studies/Interface/index.tex [19]
+(./TexModules/Studies/Interface/component.tex [20 <./TexModules/pics/vue_temp.j
 pg>]
 Overfull \hbox (9.16638pt too wide) in paragraph at lines 23--24
 []\T2A/ftm/bx/n/14.4 В пап-ке src на-хо-дят-ся ком-по-нен-ты, пап-ка components
 , фай-лы js-скриптов,
-[22 <./TexModules/pics/htmlTemp.jpg>]
+[21 <./TexModules/pics/htmlTemp.jpg>]
 Overfull \hbox (2.09486pt too wide) in paragraph at lines 34--35
 []\T2A/ftm/bx/n/14.4 В мо-ду-ле app про-ис-хо-дит под-клю-че-ние всех осталь-ны
 х vue-компонентов,
-[23 <./TexModules/pics/vuexTemp.jpg> <./TexModules/pics/vueCompTemp.jpg>]
-
-LaTeX Warning: Reference `sec:e' on page 24 undefined on input line 51.
-
-) (./TexModules/Studies/Interface/electron.tex
+[22 <./TexModules/pics/vuexTemp.jpg> <./TexModules/pics/vueCompTemp.jpg>])
+(./TexModules/Studies/Interface/electron.tex
 Overfull \hbox (37.22943pt too wide) in paragraph at lines 5--6
 \T2A/ftm/bx/n/14.4 ло-же-нии. Струк-ту-ру про-ек-та мож-но уви-деть на ри-сун-к
 е []4.5[], а скрип-та background.js
-[24] [25 <./TexModules/pics/vueElectronTemp.jpg> <./TexModules/pics/backPT1.jpg
->]))) [26 <./TexModules/pics/backPT2.jpg> <./TexModules/pics/primer1.jpg>]
-(./TexModules/Conclusion/index.tex [27 <./TexModules/pics/primer2.jpg>])
-(./TexModules/Bibliography/index.tex [28]
+[23] [24 <./TexModules/pics/vueElectronTemp.jpg> <./TexModules/pics/backPT1.jpg
+>] [25 <./TexModules/pics/backPT2.jpg>] [26 <./TexModules/pics/oknoPrilojeniya.
+jpg>] [27 <./TexModules/pics/primer1.jpg>] [28 <./TexModules/pics/primer2.jpg>]
+))) (./TexModules/Conclusion/index.tex [29 <./TexModules/pics/primer3.jpg>])
+(./TexModules/Bibliography/index.tex [30]
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 []\T2A/ftm/bx/n/14.4 Мосалев П.М. Об-зор ме-то-дов нечет-ко-го по-ис-ка тек-сто
 -
@@ -198,25 +202,37 @@ oiska-
 Underfull \hbox (badness 1189) in paragraph at lines 4--5
 \T2A/ftm/bx/n/14.4 tekstovoy-informatsii (да-та об-ра-ще-ния: 06.10.2019). За-г
 л. с экра-на Яз.
-[29]) (./TexModules/Appendix/index.tex [30]
+
+Underfull \hbox (badness 2443) in paragraph at lines 6--7
+\T2A/ftm/bx/n/14.4 to Fuzzy String Matching URL: https://medium.com/@julientreg
+oat/an-
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+\T2A/ftm/bx/n/14.4 introduction-to-fuzzy-string-matching-178805cca2ab (да-та об
+-ра-ще-ния:
+[31]
+Underfull \hbox (badness 5667) in paragraph at lines 23--24
+[]\T2A/ftm/bx/n/14.4 npm [Элек-трон-ный ре-сурс] // https://www.npmjs.com/ -- d
+ouble-
+) (./TexModules/Appendix/index.tex [32]
 (./TexModules/Appendix/progs/translit.js
-(/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd) [31]) [32]
+(/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd) [33]) [34]
 (./TexModules/Appendix/progs/cyrMetaphone.js)
-(./TexModules/Appendix/progs/forCyrMetaphone.js [33]) [34]
-(./TexModules/Appendix/progs/makeDict.js) [35]
-(./TexModules/Appendix/progs/damLev.js [36])
-(./TexModules/Appendix/progs/testForSimilarity.js [37])
-(./TexModules/Appendix/progs/testPerformance.js [38]
+(./TexModules/Appendix/progs/forCyrMetaphone.js [35]) [36]
+(./TexModules/Appendix/progs/makeDict.js) [37]
+(./TexModules/Appendix/progs/damLev.js [38])
+(./TexModules/Appendix/progs/testForSimilarity.js [39])
+(./TexModules/Appendix/progs/testPerformance.js [40]
 ! Misplaced alignment tab character &.
 l.13         .get(`https://fish-text.ru/get?&
                                              type=paragraph&number=5`)
 ! Misplaced alignment tab character &.
 l.13 ...`https://fish-text.ru/get?&type=paragraph&
                                                   number=5`)
-[39]) (./TexModules/Appendix/progs/testPerformance.txt [40]) [41]
-(./TexModules/Appendix/progs/App.vue [42])
-(./TexModules/Appendix/progs/mainFrame.vue [43] [44] [45] [46] [47])
-(./TexModules/Appendix/progs/vuex.js [48] [49] [50] [51] [52] [53])) [54]
+[41]) (./TexModules/Appendix/progs/testPerformance.txt [42]) [43]
+(./TexModules/Appendix/progs/App.vue [44])
+(./TexModules/Appendix/progs/mainFrame.vue [45] [46] [47] [48] [49])
+(./TexModules/Appendix/progs/vuex.js [50] [51] [52] [53] [54] [55])) [56]
 (tempFiles/index.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -241,7 +257,7 @@ exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts
 /type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/c
 m-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt144
 0.pfb>
-Output written on tempFiles/index.pdf (54 pages, 1197310 bytes).
+Output written on tempFiles/index.pdf (56 pages, 887897 bytes).
 SyncTeX written on tempFiles/index.synctex.gz.
 Transcript written on tempFiles/index.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex)
@@ -361,10 +377,8 @@ LaTeX Font Warning: Font shape `OT1/ftm/m/n' undefined
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)))
-(./TexModules/abbreviationsAndDefinitions.tex [2] [3]
-Overfull \hbox (2.6008pt too wide) in paragraph at lines 13--14
-[]\T2A/ftm/bx/n/14.4 ^^V по-сле-до-ва-тель-ность дей-ствий, необ-хо-ди-мая для
-) (./TexModules/intro.tex [4]) (./TexModules/Theoretical/index.tex
+(./TexModules/abbreviationsAndDefinitions.tex [2] [3]) (./TexModules/intro.tex
+[4]) (./TexModules/Theoretical/index.tex
 (./TexModules/Theoretical/Algorithms/index.tex [5]
 (./TexModules/Theoretical/Algorithms/LevensteinDistance.tex
 Overfull \hbox (5.91864pt too wide) in paragraph at lines 19--20
@@ -396,40 +410,42 @@ Overfull \hbox (7.7973pt too wide) in paragraph at lines 35--36
 )) (./TexModules/Theoretical/Interface/index.tex [12] [13] [14]))
 (./TexModules/Studies/index.tex (./TexModules/Studies/Algorithms/index.tex
 [15] (./TexModules/Studies/Algorithms/dictionary.tex [16]
-Overfull \hbox (0.8135pt too wide) in paragraph at lines 37--38
+Overfull \hbox (0.8135pt too wide) in paragraph at lines 35--36
 []\T2A/ftm/bx/n/14.4 Если в объ-ек-те от-сут-ству-ет ключ, со-от-вет-ству-ю-щий
  оче-ред-ной бук-
 [17] (./TexModules/Appendix/progs/first5words.txt))
-(./TexModules/Studies/Algorithms/testForSimilarity.tex [18]
-Overfull \hbox (42.07695pt too wide) in paragraph at lines 20--21
+(./TexModules/Studies/Algorithms/testForSimilarity.tex
+Overfull \hbox (11.2697pt too wide) in paragraph at lines 3--4
+\T2A/ftm/bx/n/14.4 ная функ-ция, ко-то-рая воз-вра-ща-ет не толь-ко рас-сто-я-н
+ие Дамерау-Левенштейна,
+[18]
+Overfull \hbox (42.07695pt too wide) in paragraph at lines 18--19
 []\T2A/ftm/bx/n/14.4 Также в те-ле функ-ции на-хо-дят-ся транс-ли-те-ра-ция сло
 -ва, его double_metaphone
 
-Overfull \hbox (2.53558pt too wide) in paragraph at lines 24--25
+Overfull \hbox (2.53558pt too wide) in paragraph at lines 22--23
 \T2A/ftm/bx/n/14.4 бо-лее чем на 1, об-ра-ба-ты-ва-ет-ся с ис-ход-ным сло-вом а
 л-го-рит-мом Дамерау-
-)) (./TexModules/Studies/Interface/index.tex [19] [20]
-(./TexModules/Studies/Interface/component.tex [21 <./TexModules/pics/vue_temp.j
+)) (./TexModules/Studies/Interface/index.tex [19]
+(./TexModules/Studies/Interface/component.tex [20 <./TexModules/pics/vue_temp.j
 pg>]
 Overfull \hbox (9.16638pt too wide) in paragraph at lines 23--24
 []\T2A/ftm/bx/n/14.4 В пап-ке src на-хо-дят-ся ком-по-нен-ты, пап-ка components
 , фай-лы js-скриптов,
-[22 <./TexModules/pics/htmlTemp.jpg>]
+[21 <./TexModules/pics/htmlTemp.jpg>]
 Overfull \hbox (2.09486pt too wide) in paragraph at lines 34--35
 []\T2A/ftm/bx/n/14.4 В мо-ду-ле app про-ис-хо-дит под-клю-че-ние всех осталь-ны
 х vue-компонентов,
-[23 <./TexModules/pics/vuexTemp.jpg> <./TexModules/pics/vueCompTemp.jpg>]
-
-LaTeX Warning: Reference `sec:e' on page 24 undefined on input line 51.
-
-) (./TexModules/Studies/Interface/electron.tex
+[22 <./TexModules/pics/vuexTemp.jpg> <./TexModules/pics/vueCompTemp.jpg>])
+(./TexModules/Studies/Interface/electron.tex
 Overfull \hbox (37.22943pt too wide) in paragraph at lines 5--6
 \T2A/ftm/bx/n/14.4 ло-же-нии. Струк-ту-ру про-ек-та мож-но уви-деть на ри-сун-к
 е []4.5[], а скрип-та background.js
-[24] [25 <./TexModules/pics/vueElectronTemp.jpg> <./TexModules/pics/backPT1.jpg
->]))) [26 <./TexModules/pics/backPT2.jpg> <./TexModules/pics/primer1.jpg>]
-(./TexModules/Conclusion/index.tex [27 <./TexModules/pics/primer2.jpg>])
-(./TexModules/Bibliography/index.tex [28]
+[23] [24 <./TexModules/pics/vueElectronTemp.jpg> <./TexModules/pics/backPT1.jpg
+>] [25 <./TexModules/pics/backPT2.jpg>] [26 <./TexModules/pics/oknoPrilojeniya.
+jpg>] [27 <./TexModules/pics/primer1.jpg>] [28 <./TexModules/pics/primer2.jpg>]
+))) (./TexModules/Conclusion/index.tex [29 <./TexModules/pics/primer3.jpg>])
+(./TexModules/Bibliography/index.tex [30]
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 []\T2A/ftm/bx/n/14.4 Мосалев П.М. Об-зор ме-то-дов нечет-ко-го по-ис-ка тек-сто
 -
@@ -444,31 +460,40 @@ oiska-
 Underfull \hbox (badness 1189) in paragraph at lines 4--5
 \T2A/ftm/bx/n/14.4 tekstovoy-informatsii (да-та об-ра-ще-ния: 06.10.2019). За-г
 л. с экра-на Яз.
-[29]) (./TexModules/Appendix/index.tex [30]
+
+Underfull \hbox (badness 2443) in paragraph at lines 6--7
+\T2A/ftm/bx/n/14.4 to Fuzzy String Matching URL: https://medium.com/@julientreg
+oat/an-
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+\T2A/ftm/bx/n/14.4 introduction-to-fuzzy-string-matching-178805cca2ab (да-та об
+-ра-ще-ния:
+[31]
+Underfull \hbox (badness 5667) in paragraph at lines 23--24
+[]\T2A/ftm/bx/n/14.4 npm [Элек-трон-ный ре-сурс] // https://www.npmjs.com/ -- d
+ouble-
+) (./TexModules/Appendix/index.tex [32]
 (./TexModules/Appendix/progs/translit.js
-(/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd) [31]) [32]
+(/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd) [33]) [34]
 (./TexModules/Appendix/progs/cyrMetaphone.js)
-(./TexModules/Appendix/progs/forCyrMetaphone.js [33]) [34]
-(./TexModules/Appendix/progs/makeDict.js) [35]
-(./TexModules/Appendix/progs/damLev.js [36])
-(./TexModules/Appendix/progs/testForSimilarity.js [37])
-(./TexModules/Appendix/progs/testPerformance.js [38]
+(./TexModules/Appendix/progs/forCyrMetaphone.js [35]) [36]
+(./TexModules/Appendix/progs/makeDict.js) [37]
+(./TexModules/Appendix/progs/damLev.js [38])
+(./TexModules/Appendix/progs/testForSimilarity.js [39])
+(./TexModules/Appendix/progs/testPerformance.js [40]
 ! Misplaced alignment tab character &.
 l.13         .get(`https://fish-text.ru/get?&
                                              type=paragraph&number=5`)
 ! Misplaced alignment tab character &.
 l.13 ...`https://fish-text.ru/get?&type=paragraph&
                                                   number=5`)
-[39]) (./TexModules/Appendix/progs/testPerformance.txt [40]) [41]
-(./TexModules/Appendix/progs/App.vue [42])
-(./TexModules/Appendix/progs/mainFrame.vue [43] [44] [45] [46] [47])
-(./TexModules/Appendix/progs/vuex.js [48] [49] [50] [51] [52] [53])) [54]
+[41]) (./TexModules/Appendix/progs/testPerformance.txt [42]) [43]
+(./TexModules/Appendix/progs/App.vue [44])
+(./TexModules/Appendix/progs/mainFrame.vue [45] [46] [47] [48] [49])
+(./TexModules/Appendix/progs/vuex.js [50] [51] [52] [53] [54] [55])) [56]
 (tempFiles/index.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
  )
 (see the transcript file for additional information){/usr/share/texmf-dist/font
@@ -484,6 +509,6 @@ exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts
 /type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/c
 m-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt144
 0.pfb>
-Output written on tempFiles/index.pdf (54 pages, 1197310 bytes).
+Output written on tempFiles/index.pdf (56 pages, 887749 bytes).
 SyncTeX written on tempFiles/index.synctex.gz.
 Transcript written on tempFiles/index.log.
